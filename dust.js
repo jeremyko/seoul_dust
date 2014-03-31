@@ -46,7 +46,10 @@ request({uri: 'http://cleanair.seoul.go.kr/air_city.htm?method=measure', encodin
                 strVal9 = strVal9.replace("</sub>", "");
                 strVal9 = strVal9.replace("<sub>2", "²");
 
-                console.log('-' + strArea + ': PM10=' + strVal10+ ' / PM2.5=' +strVal2_5 + ' / ' + strStatus+ ' / ' + '결정물질:'+strVal9 +' ['+strDeterminationFactor +']');
+                console.log('-' + strArea + ': PM10=' +
+                    strVal10+ ' / PM2.5=' +strVal2_5 + ' / ' +
+                    strStatus+ ' / ' + '결정물질:'+
+                    strVal9 +' ['+strDeterminationFactor +']');
             }
         })
 
