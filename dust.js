@@ -38,7 +38,7 @@ var cheerio = require('cheerio');
                 //console.log("-----strArea:",strArea); //debug
 
 
-                if(strArea=="금천구"||strArea=="강북구"||strArea=="양천구") {
+                if(strArea=="금천구"|| strArea=="관악구"||strArea=="구로구") {
                     var strVal10 = $(this).find("td").eq(1).text().replace(/\s+/, "");
                     strVal10 = strVal10.replace(/(\r\n|\n|\r)/gm, "");
                     strVal10 = strVal10.replace(/\s+/, "");
@@ -71,6 +71,7 @@ var cheerio = require('cheerio');
                 }
             });
 
+            /*
             //summary info
             request({uri: 'http://cleanair.seoul.go.kr/main.htm', encoding: 'binary'},
                 function(err, response, body) {
@@ -106,5 +107,6 @@ var cheerio = require('cheerio');
                         console.log('* 풍속 : ' + strWin );
                     });
                 });
+                */
         });
 
