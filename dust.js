@@ -8,8 +8,9 @@ var cheerio = require('cheerio');
         function(err, response, body) {
             var strContents = new Buffer(body, 'binary');
 
-            iconv = new Iconv1('euc-kr', 'UTF8');
-            strContents = iconv.convert(strContents).toString();
+            //no convert need. already utf-8. they changed.
+            //iconv = new Iconv1('euc-kr', 'UTF8');
+            //strContents = iconv.convert(strContents).toString();
             //console.log("strContents:",strContents); //debug
 
             console.log("=============================================="); //debug
