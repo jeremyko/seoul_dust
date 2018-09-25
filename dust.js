@@ -6,7 +6,7 @@ var cheerio = require('cheerio');
     //detailed info
     request({uri: 'http://cleanair.seoul.go.kr/air_city.htm?method=measure', encoding: 'binary'},
         function(err, response, body) {
-            var strContents = new Buffer(body, 'binary');
+            var strContents = Buffer.from(body, 'binary');
 
             //no convert need. already utf-8. they changed.
             //iconv = new Iconv1('euc-kr', 'UTF8');
@@ -76,7 +76,7 @@ var cheerio = require('cheerio');
             //summary info
             request({uri: 'http://cleanair.seoul.go.kr/main.htm', encoding: 'binary'},
                 function(err, response, body) {
-                    var strContents = new Buffer(body, 'binary');
+                    var strContents = Buffer.from(body, 'binary');
                     iconv = new Iconv1('euc-kr', 'UTF8')
                     strContents = iconv.convert(strContents).toString();
                     //console.log(strContents);
