@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "request": "2.x.x",
-    "iconv": "2.x.x",
+    "iconv": "3.x.x",
     "cheerio": "0.x.x"
   }
 }
